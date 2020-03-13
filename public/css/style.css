@@ -1,0 +1,24 @@
+header img{
+	max-height: 40px;
+	margin-left: 20px;
+	margin-top: 3px;
+}
+
+.home-container{
+	margin-top: -14em!important;
+}
+
+.icon-edit{
+	float: right;
+	cursor: pointer;
+}
+
+.blog-list p{
+	height: 110px;
+	overflow: hidden;
+}
+
+.img-article{
+	width: 100px;
+	overflow: hidden;
+}

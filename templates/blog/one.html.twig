@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+{% block title %}Article{% endblock %}
+
+{% block body %}
+
+<!-- Main -->
+	<section id="main" class="container">
+		<header>
+			<h2>{{article.title}}</h2>
+			<p>A generic page for every non-generic situation.</p>
+		</header>
+		<div class="box">
+			<span class="image featured"><img src="img/pic01.jpg" alt="" /></span>
+			<h3>{{article.title}}</h3>
+			<p>{{article.texte}}</p>
+		</div>
+	</section>
+{% endblock %}

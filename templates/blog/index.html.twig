@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Actualité{% endblock %}
+
+{% block body %}
+	<section id="main" class="container">
+		<header>
+			<h2>Actualité</h2>
+			{% if app.user is not null  %}
+				<a href="{{path('newArticle')}}">
+					<i class="fas fa-plus icon-edit" ></i>
+				</a>
+			{% endif %}
+		</header>
+		{% for article in articles %}
+
+			<section class="box blog-list">
+				<h4>{{article.title}}</h4>
+				<p>	
+					<span class="image left img-article"><img src="img/pic01.jpg" alt="" /></span>
+					{{article.texte}}
+				</p>
+				<ul class="actions special">
+					<li><a href="{{path('oneArticle', {articleId: article.id})}}" class="button alt">Lire plus</a></li>
+				</ul>
+			</section>
+		{% endfor %}
+			
+	</section>
+{% endblock %}

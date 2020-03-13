@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+{% block title %}Modification d'un element{% endblock %}
+{% block body %}
+
+<section id="main" class="container medium">
+	<header>
+		<h2>Modifier un élément</h2>
+	</header>
+	<div class="box">
+	    {{ form_start(form) }}
+
+
+	        {{form_row(form.title)}}
+
+
+	        {{form_row(form.texte)}}
+
+
+	        {{form_row(form.icon)}}
+
+
+	        {{form_widget(form.Confirmer) }}
+
+
+	    {{ form_end(form) }}
+	</div>
+</section>
+
+{% endblock %}

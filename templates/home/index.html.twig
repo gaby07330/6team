@@ -1,0 +1,120 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} Bienvenu {% endblock %}
+
+{% block body %}
+	
+	<!-- Banner -->
+		<section id="banner">
+			<h2>6Team</h2>
+			<!-- <p>Another fine responsive site template freebie by HTML5 UP.</p> -->
+			<ul class="actions special">
+				<li><a href="{{path ('blog')}}" class="button primary">Blog</a></li>
+				<li><a href="{{path ('contact')}}" class="button">Contact</a></li>
+			</ul>
+		</section>
+
+	<!-- Main -->	
+		<section id="main" class="container home-container">
+
+			<section class="box special">
+
+				{% if app.user is not null  %}
+					<a href="{{path('setHome', {homeId: bandeau.id})}}">
+						<i class="fas fa-edit icon-edit" ></i>
+					</a>
+				{% endif %}
+
+				<header class="major">
+					<h2>{{bandeau.title}}</h2>
+					<p>{{bandeau.texte}}</p>
+				</header>
+				<span class="image featured"><img src="images/pic01.jpg" alt="" /></span>
+			</section>
+
+			<section class="box special features">
+				<div class="features-row">
+					<section>
+
+						{% if app.user is not null  %}
+							<a href="{{path('setHome', {homeId: porfolio1.id})}}">
+								<i class="fas fa-edit icon-edit" ></i>
+							</a>
+						{% endif %}
+
+						
+						<span class="icon solid major {{porfolio1.icon}} accent2"></span>
+						<h3>{{porfolio1.title}}</h3>
+						<p>{{porfolio1.texte}}</p>
+					</section>
+					<section>
+
+						{% if app.user is not null  %}
+							<a href="{{path('setHome', {homeId: porfolio2.id})}}">
+								<i class="fas fa-edit icon-edit" ></i>
+							</a>
+						{% endif %}	
+
+						<span class="icon solid major {{porfolio2.icon}} accent3"></span>
+						<h3>{{porfolio2.title}}</h3>
+						<p>{{porfolio2.texte}}</p>
+					</section>
+				</div>
+				<div class="features-row">
+					<section>
+
+						{% if app.user is not null  %}
+							<a href="{{path('setHome', {homeId: porfolio3.id})}}">
+								<i class="fas fa-edit icon-edit" ></i>
+							</a>
+						{% endif %}
+
+						<span class="icon solid major {{porfolio3.icon}} accent4"></span>
+						<h3>{{porfolio3.title}}</h3>
+						<p>{{porfolio3.texte}}</p>
+					</section>
+					<section>
+
+						{% if app.user is not null  %}
+							<a href="{{path('setHome', {homeId: porfolio4.id})}}">
+								<i class="fas fa-edit icon-edit" ></i>
+							</a>
+						{% endif %}
+
+						<span class="icon solid major {{porfolio4.icon}} accent5"></span>
+						<h3>{{porfolio4.title}}</h3>
+						<p>{{porfolio4.texte}}</p>
+					</section>
+				</div>
+			</section>
+
+			<div class="row">
+				<div class="col-6 col-12-narrower">
+
+					<section class="box special">
+						<span class="image featured"><img src="images/pic02.jpg" alt="" /></span>
+						<h3>Sed lorem adipiscing</h3>
+						<p>Integer volutpat ante et accumsan commophasellus sed aliquam feugiat lorem aliquet ut enim rutrum phasellus iaculis accumsan dolore magna aliquam veroeros.</p>
+						<ul class="actions special">
+							<li><a href="#" class="button alt">Learn More</a></li>
+						</ul>
+					</section>
+
+				</div>
+				<div class="col-6 col-12-narrower">
+
+					<section class="box special">
+						<span class="image featured"><img src="images/pic03.jpg" alt="" /></span>
+						<h3>Accumsan integer</h3>
+						<p>Integer volutpat ante et accumsan commophasellus sed aliquam feugiat lorem aliquet ut enim rutrum phasellus iaculis accumsan dolore magna aliquam veroeros.</p>
+						<ul class="actions special">
+							<li><a href="#" class="button alt">Learn More</a></li>
+						</ul>
+					</section>
+
+				</div>
+			</div>
+
+		</section>
+
+{% endblock %}

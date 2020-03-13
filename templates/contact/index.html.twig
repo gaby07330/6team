@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello ContactController!{% endblock %}
+
+{% block body %}
+
+	<!-- Main -->
+		<section id="main" class="container medium">
+			<header>
+				<h2>Contacter nous</h2>
+				<!-- <p>Tell us what you think about our little operation.</p> -->
+			</header>
+			<div class="box">
+				<form method="post" action="#">
+					<div class="row gtr-50 gtr-uniform">
+						<div class="col-6 col-12-mobilep">
+							<input type="text" name="name" id="name" value="" placeholder="Nom" />
+						</div>
+						<div class="col-6 col-12-mobilep">
+							<input type="email" name="email" id="email" value="" placeholder="Email" />
+						</div>
+						<div class="col-12">
+							<input type="text" name="subject" id="subject" value="" placeholder="Sujet" />
+						</div>
+						<div class="col-12">
+							<textarea name="message" id="message" placeholder="Entrer votre message" rows="6"></textarea>
+						</div>
+						<div class="col-12">
+							<ul class="actions special">
+								<li><input type="submit" value="Envoyer" /></li>
+							</ul>
+						</div>
+					</div>
+				</form>
+			</div>
+		</section>
+
+{% endblock %}
