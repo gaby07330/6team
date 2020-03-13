@@ -3,9 +3,11 @@
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Doctrine\ORM\Mapping\HasLifecycleCallbacks;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\ArticleRepository")
+ * @ORM\HasLifecycleCallbacks
  */
 class Article
 {
@@ -35,6 +37,11 @@ class Article
      * @ORM\Column(type="boolean")
      */
     private $isActive;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $ImgName;
 
     public function getId(): ?int
     {
@@ -85,6 +92,18 @@ class Article
     public function setIsActive(bool $isActive): self
     {
         $this->isActive = $isActive;
+
+        return $this;
+    }
+
+    public function getImgName(): ?string
+    {
+        return $this->ImgName;
+    }
+
+    public function setImgName(string $ImgName): self
+    {
+        $this->ImgName = $ImgName;
 
         return $this;
     }

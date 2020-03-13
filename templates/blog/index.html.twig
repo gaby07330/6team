@@ -16,8 +16,9 @@
 
 			<section class="box blog-list">
 				<h4>{{article.title}}</h4>
-				<p>	
-					<span class="image left img-article"><img src="img/pic01.jpg" alt="" /></span>
+				<p>
+					<!-- Affichage Image -->
+					<span class="image left img-article"><img src="{{ asset('uploads/Articles/'~ article.imgName) }}" alt="" /></span>
 					{{article.texte}}
 				</p>
 				<ul class="actions special">
@@ -25,6 +26,6 @@
 				</ul>
 			</section>
 		{% endfor %}
-			
+
 	</section>
 {% endblock %}
